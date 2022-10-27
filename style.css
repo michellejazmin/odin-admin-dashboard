@@ -36,13 +36,14 @@ body {
   grid-area: sidebar;
   background-color: var(--primary-color);
   margin: 0;
-  padding: 50px 30px;
+  padding: 30px;
   border: none;
   color: white;
   display: grid;
   grid-auto-flow: row;
   grid-auto-rows: max-content;
   justify-content: start;
+  align-content: start;
   gap: 2rem;
 }
 
@@ -55,8 +56,8 @@ body {
 }
 
 .dashboard-icon {
-  height: 2.5rem;
-  width: 2.5rem;
+  height: 3rem;
+  width: 3rem;
 }
 
 .sidebar h1 {
@@ -88,8 +89,9 @@ body {
 }
 
 .nav-item {
-  display: flex;
-  justify-content: start;
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  justify-items: start;
   align-items: center;
   gap: 1rem;
   width: 100%;
@@ -98,12 +100,12 @@ body {
 }
 
 .nav-item > * {
-  flex: 0 0 auto;
   margin: 0;
   padding: 0;
 }
 
 .nav-icon {
+  justify-self: center;
   width: 1.5rem;
   height: 1.5rem;
 }
