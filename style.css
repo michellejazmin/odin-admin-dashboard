@@ -16,10 +16,12 @@ body {
   grid-template-areas: "sidebar header"
                        "sidebar main"
                        "sidebar main";
+  gap: 0;
   margin: 0;
   padding: 0;
   border: none;
   min-height: 100vh;
+  width: 100vw;
 }
 
 .header {
@@ -37,6 +39,73 @@ body {
   padding: 50px 30px;
   border: none;
   color: white;
+  display: grid;
+  grid-auto-flow: row;
+  grid-auto-rows: max-content;
+  justify-content: start;
+  gap: 2rem;
+}
+
+.sidebar-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.dashboard-icon {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.sidebar h1 {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.sidebar nav {
+  display: grid;
+  grid-auto-flow: row;
+  grid-auto-rows: max-content;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list {
+  display: grid;
+  grid-auto-flow: row;
+  grid-auto-rows: max-content;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-size: 1.3rem;
+}
+
+.nav-item {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item > * {
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-icon {
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 .main {
