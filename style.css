@@ -8,6 +8,8 @@
 
 *, *::before, *::after {
   box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -28,8 +30,85 @@ body {
   grid-area: header;
   background-color: white;
   margin: 0;
-  padding: 30px;
+  padding: 16px 32px;
   border: none;
+  display: grid;
+  grid-template: 1fr 2fr / 3fr 1fr;
+  gap: 1.5rem;
+}
+
+.header-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.profile-picture-thumbnail {
+  width: 36px;
+}
+
+.user-thumbnail {
+  width: 64px;
+}
+
+.search-wrapper,
+.account-controls,
+.greeting-wrapper,
+.buttons-menu {
+  display: grid;
+  align-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+}
+
+.search-wrapper, .greeting-wrapper {
+  justify-content: start;
+}
+
+.account-controls, .buttons-menu {
+  justify-content: end;
+}
+
+.search-wrapper {
+  grid-template-columns: max-content 1fr;
+}
+
+.search-wrapper input[type="search"] {
+  padding: .5rem 1rem;
+  border: none;
+  border-radius: 1rem;
+  background-color: var(--secondary-color);
+}
+
+.account-controls p {
+  font-weight: 700;
+}
+
+.greeting p {
+  font-size: 1.1rem;
+}
+
+.greeting h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.buttons-menu button {
+  background-color: var(--primary-color);
+  padding: 1em 2em;
+  border: none;
+  border-radius: 1.5em;
+  color: white;
+  font-weight: 700;
+}
+
+.buttons-menu button:hover {
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2), inset 2px 2px 2px rgba(255, 255, 255, 0.3);
+}
+
+.buttons-menu button:active {
+  box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.2), inset 0px 0px 1px rgba(0, 0, 0, 0.2);
 }
 
 .sidebar {
