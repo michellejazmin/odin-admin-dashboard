@@ -20,7 +20,7 @@ body {
                        "sidebar main";
   gap: 0;
   min-height: 100vh;
-  width: 100vw;
+  max-width: 100vw;
 }
 
 .header {
