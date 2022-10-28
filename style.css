@@ -14,14 +14,11 @@
 
 body {
   display: grid;
-  grid-template: 1fr 4fr / 1fr 5fr;
+  grid-template: 1fr 5fr / 1fr 5fr;
   grid-template-areas: "sidebar header"
                        "sidebar main"
                        "sidebar main";
   gap: 0;
-  margin: 0;
-  padding: 0;
-  border: none;
   min-height: 100vh;
   width: 100vw;
 }
@@ -29,7 +26,6 @@ body {
 .header {
   grid-area: header;
   background-color: white;
-  margin: 0;
   padding: 16px 32px;
   border: none;
   display: grid;
@@ -114,7 +110,6 @@ body {
 .sidebar {
   grid-area: sidebar;
   background-color: var(--primary-color);
-  margin: 0;
   padding: 30px;
   border: none;
   color: white;
@@ -135,14 +130,10 @@ body {
 }
 
 .dashboard-icon {
-  height: 3rem;
   width: 3rem;
 }
 
 .sidebar h1 {
-  margin: 0;
-  padding: 0;
-  border: none;
   font-size: 2rem;
   font-weight: 700;
 }
@@ -152,8 +143,6 @@ body {
   grid-auto-flow: row;
   grid-auto-rows: max-content;
   gap: 2rem;
-  margin: 0;
-  padding: 0;
 }
 
 .nav-list {
@@ -161,8 +150,6 @@ body {
   grid-auto-flow: row;
   grid-auto-rows: max-content;
   gap: 1rem;
-  margin: 0;
-  padding: 0;
   list-style-type: none;
   font-size: 1.3rem;
 }
@@ -174,13 +161,6 @@ body {
   align-items: center;
   gap: 1rem;
   width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-item > * {
-  margin: 0;
-  padding: 0;
 }
 
 .nav-icon {
@@ -192,8 +172,99 @@ body {
 .main {
   grid-area: main;
   background-color: var(--secondary-color);
-  margin: 0;
-  padding: 50px 30px;
+  padding: 32px;
   border: none;
   box-shadow: inset 0px 1px 10px rgba(0, 0, 0, 0.2);
+  display: grid;
+  grid-template: 1fr 1fr / 3fr 1fr;
+  grid-template-areas:
+    "projects announcements"
+    "projects trending";
+  gap: 2rem 1rem;
 }
+
+.projects {
+  grid-area: projects;
+  /* width: 90%; */
+}
+
+.announcements {
+  grid-area: announcements;
+}
+
+.trending {
+  grid-area: trending;
+}
+
+.section-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+  width: 100%;
+}
+
+.card {
+  background-color: white;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+  border: none;
+  border-radius: 6px;
+  padding: 24px;
+  line-height: 1.3;
+}
+
+.project-card {
+  display: grid;
+  align-content: center;
+  align-items: center;
+  gap: 20px;
+  border-left: 6px solid var(--accent-color);
+}
+
+.project-title {
+  margin-bottom: 5px;
+}
+
+.project-description p {
+  color: #888;
+  font-size: .9rem;
+}
+
+.card-icons {
+  justify-self: end;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.card-icon {
+  height: 1.5rem;
+}
+
+.trending .card {
+  display: grid;
+  grid-auto-flow: row;
+  grid-auto-rows: auto;
+  gap: 24px;
+}
+
+.trending-row {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: auto 1fr;
+  gap: 16px;
+}
+
+.trending-thumbnail {
+  width: 48px;
+}
+
+.trending-username {
+  font-weight: 700;
+}
+
